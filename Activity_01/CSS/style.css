@@ -28,7 +28,7 @@ body {
                     'footer footer footer footer';
     grid-gap: 0.75em;
     padding: 1em;
-    background-color: #87cefa44;
+    background-color: #00005522;
 }
 
 .content-header { 
@@ -88,7 +88,7 @@ header img {
     padding-bottom: 0;
 }
 
-/* Media queries */
+/* Media query */
 @media screen and (max-width: 767px) {
     *{
         padding: 0.1em;

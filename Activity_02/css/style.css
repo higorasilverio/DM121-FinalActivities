@@ -1,14 +1,68 @@
-*{
+/* Configurações gerais */
+* {
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
 }
-li{
+
+li {
     list-style: none
 }
 
-#container{
+/* Configurações compartilhadas */
+/* header */
+header {
+    background: #333333;
+    color: #fff;
+    padding: 0.625em; /* 10 / 16*/
+    border-bottom: 0.1875em solid #FF9900; /* 3 / 16*/
+    align-items: center;
+}
+
+header h1 {
+    flex: 1;
+}
+
+header li {
+    display: inline;
+    padding: 0 1.25em 0 1.25em; /* 20 / 16*/
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em; /* 16 / 16*/
+}
+
+header a:hover {
+    color: #FF9900;
+}
+
+/* nav */
+nav {
+    background: #232323;
+}
+
+/* footer */
+footer {
+    color: #fff;
+    background: #333333;
+    text-align: center;
+}
+
+/* Destaque do link selecionado */
+/* Divisão entre header e main */
+.highlight {
+    color: #FF9900;
+    font-weight: bold;
+}
+
+
+/* Configurações do arquivo home.html */
+/* Corpo geral */
+#container-home {
     width: 90%;
     max-width: 100%;
     margin: 0 auto;
@@ -17,56 +71,28 @@ li{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fff;
 
-    /*Configuração do Grid*/
+    /* Configuração do Grid */
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
 
-#main-content{
+#main-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
 }
 
-#showcase, #newsletter, #box-languages{
+#showcase, #newsletter, #box-languages {
     grid-column-start: 1;
     grid-column-end: 4;
 }
 
-.flex-container{
+.flex-container {
     display: flex;
 }
 
-/*Header*/
-header{
-    background: #333333;
-    color: #fff;
-    padding: 0.625em; /* 10 / 16*/
-    border-bottom: 0.1875em solid #FF9900; /* 3 / 16*/
-    align-items: center;
-}
-header h1{
-    flex: 1;
-}
-header li{
-    display: inline;
-    padding: 0 1.25em 0px 1.25em; /* 20 / 16*/
-}
-header a{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1em; /* 16 / 16*/
-}
-header a:hover{
-    color: #FF9900;
-}
-
-nav {
-    background: #232323;
-}
-
-/*showcase*/
-#showcase{
+/* showcase */
+#showcase {
     flex-direction: row;
     color: #000;
     text-align: center;
@@ -86,52 +112,42 @@ nav {
     margin: auto 0;
 }
 
-/*newsletter*/
-#newsletter{
+.box {
+    text-align: center;
+    padding: 0.625em; /* 10 / 16 */
+}
+
+.box img {
+    max-width: 50%;
+}
+
+/* newsletter */
+#newsletter {
     background: #333333;
     color: #fff;
 }
-#newsletter h2{
+
+#newsletter h2 {
    flex: 1; 
 }
+
 #newsletter h2,
-#newsletter form{
+#newsletter form {
     margin: 0.9375em; /* 15 / 16*/
 }
-#newsletter input[type=email]{
+
+#newsletter input[type=email] {
     padding: 0.25em; /* 4 / 16 */
     height: 2.375em; /* 38 / 16 */
     width: 15.635em; /* 250 / 16 */
 }
 
-/*showcase*/
-.box{
-    text-align: center;
-    padding: 0.625em; /* 10 / 16 */
-}
-.box img{
-    max-width: 50%;
-}
-
-/*box-languages*/
+/* box-languages */
 #box-languages img {
     width: 20%;
 }
 
-
-/*footer*/
-footer{
-    color: #fff;
-    background: #333333;
-    text-align: center;
-}
-
-.highlight{
-    color: #FF9900;
-    font-weight: bold;
-}
-
-.button{
+.button-home {
     height: 2.375em; /* 38 / 16*/
     background: #C0BAB6;
     border: 0;
@@ -140,43 +156,140 @@ footer{
     color: #fff;
 }
 
-@media screen and (max-width: 48em){ /* 768 / 16*/
-    .flex-container{
-        flex-direction: column;
-    }
-    header h1{
+/* Configurações do arquivo services.html */
+/* Corpo geral */
+#container-services {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+
+    /*Configuração do Grid*/
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* cotacao */
+.cotacao {
+    color: #fff;
+    background-color: #35424a;
+    height: 18.75em; /* 300 / 16 */
+    margin: 0.625em 0.625em 0 0;
+}
+
+.cotacao h3 {
+    margin: 0.3125em;  /* 5 / 16 */
+}
+
+.cotacao form {
+    padding: 0.625em; /* 10 / 16 */
+}
+
+.cotacao input, textarea {
+    width: 15.9375em; /* 255 / 16 */
+}
+
+/* services */
+#services-content {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#services li {
+    border: 0.0625em solid #ccc ;/* 1 / 16 */
+    background-color: #e6e6e6;
+    padding: 0.625em; /* 10 / 16 */
+    margin-right: 0.625em; /* 10 / 16 */
+}
+
+.button-services {
+    height: 2.375em; /* 38 / 16*/
+    background: #FF9900;
+    border: 0;
+    padding-left: 1.25em; /* 20 / 16*/
+    padding-right: 1.25em; /* 20 / 16*/
+    color: #fff;
+}
+
+
+/* Configurações de responsividade */
+/* através de media query */
+
+/* Dispositivos pequeno até dispositivos extra grande */
+@media screen and (max-width: 48em) { /* 768 / 16*/
+    
+    /* Configurações compartilhadas */
+    header h1 {
         margin: 0;
     }
     header li {
         display: block;
         padding: 0.625em; /* 10 / 16*/
     }
-    #showcase{
+        
+    footer {
+        padding: 0.3125em; /* 5 / 16*/
+    }
+
+    /* Configurações do arquivo home.html */
+    .flex-container {
+        flex-direction: column;
+    }
+    #showcase {
         background: #f4f4f4;
         color: #000;
         min-height: 10vh;
     }
-    #newsletter h2,#newsletter form{
-        margin: 0;
+
+    #showcase-container {
+        width: 80%;
     }
-    .box{
-        padding: 0.1875em; /* 3 / 16*/
-    }
-    .box h3{
+    
+    #showcase img {
         display: none;
     }
-    .box img{
+
+    #newsletter h2,#newsletter form {
+        margin: 0;
+    }
+
+    .box {
+        padding: 0.1875em; /* 3 / 16*/
+    }
+
+    .box h3 {
+        display: none;
+    }
+
+    .box img {
         max-width: 30%;
     }
-    footer{
-        padding: 0.3125em; /* 5 / 16*/
+
+    /* Configurações do arquivo services.html */
+    #services-content {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
+
+    .cotacao {
+        color: #fff;
+        background-color: #35424a;
+        height: 18.75em; /* 300 / 16 */
+        width: 17.1875em; /* 275 / 16 */
+        margin: 0 auto 0.625em auto;
+    }
+
 }
-@media screen and (max-width: 20em){ /* 320 / 16*/
+
+/* Dispositivos muito pequenop */
+@media screen and (max-width: 20em) { /* 320 / 16*/
+
+    /* Configurações do arquivo home.html */
     #newsletter input[type=email],
-    #newsletter button{
+    #newsletter button {
         width: 100%;
     }
 }
-
-
