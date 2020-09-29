@@ -2,7 +2,7 @@
 
 ## Activity 01
 
-Development of a resposive web page with my curriculun on it. 
+Development of a resposive web page with my curriculum on it. 
 
 Done in September 28, 2020.
 
@@ -13,3 +13,11 @@ Manipulation of a web page already finished, to change its design, and insert on
 All pages in this activity are responsive.
 
 Done in September 29, 2020.
+
+### Link to access the curriculum (Activity 01) on-line
+
+https://dm121-final-higor-silverio.web.app/
+
+### Link to access the services page (Activity 02) on-line
+
+https://dm121-final-higor-silverio.web.app/atividade2/
